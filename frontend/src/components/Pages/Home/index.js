@@ -1,6 +1,9 @@
 //Hooks
 // import { useSelector } from 'react-redux';
 
+//components
+import { Sidebar } from '../../Sidebar';
+
 //styles
 import styles from './Home.module.css';
 
@@ -9,7 +12,7 @@ export const Home = () => {
 
     return (
         <div className={styles.wrapper}>
-            {/*sidebar*/}
+            <Sidebar />
             <section className={styles.section}>
                 {/*Object.values(questions).map(question =>
                     <Post key={question.id} question={question}>
