@@ -1,0 +1,59 @@
+Extra light
+font-family: din-2014, sans-serif;
+font-weight: 200;
+font-style: normal;
+
+Extra light italic
+font-family: din-2014, sans-serif;
+font-weight: 200;
+font-style: italic;
+
+Light
+font-family: din-2014, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Light italic
+font-family: din-2014, sans-serif;
+font-weight: 300;
+font-style: italic;
+
+Regular
+font-family: din-2014, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Italic
+font-family: din-2014, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Demi
+font-family: din-2014, sans-serif;
+font-weight: 600;
+font-style: normal;
+
+Demi italic
+font-family: din-2014, sans-serif;
+font-weight: 600;
+font-style: italic;
+
+Bold
+font-family: din-2014, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Bold italic
+font-family: din-2014, sans-serif;
+font-weight: 700;
+font-style: italic;
+
+Extra bold
+font-family: din-2014, sans-serif;
+font-weight: 800;
+font-style: normal;
+
+Extra bold italic
+font-family: din-2014, sans-serif;
+font-weight: 800;
+font-style: italic;

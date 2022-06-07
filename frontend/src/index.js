@@ -7,7 +7,7 @@ import { Provider, useDispatch } from 'react-redux';
 import App from './App';
 
 //styles
-import styles from './index.module.css';
+import styles from './BasicStyles/index.module.css';
 
 //actions
 import configureStore from './store';

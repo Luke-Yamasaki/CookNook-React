@@ -1,18 +1,22 @@
 //Hooks
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //components
-import LoginForm from "./components/Forms/Login";
-import SignupForm from "./components/Forms/Signup";
 import Modal from "./components/Modal";
+import Navbar from './components/Navbar';
+import { NotFound } from './components/Pages/NotFound';
 
 //actions
 import { restoreUser }from "./store/session";
 
+//styles
+import styles from './BasicStyles/App.module.css';
+
 function App() {
   const dispatch = useDispatch();
+  const sessionUser = useSelector(state => state.session.user);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -21,15 +25,18 @@ function App() {
 
   return isLoaded && (
     <BrowserRouter>
+    <div className={styles.background}>
+      {sessionUser && <Navbar />}
       <Modal />
       <Switch>
-        <Route path="/login">
-          <LoginForm />
+        <Route path="/welcome">
+          <div>Hello</div>
         </Route>
-        <Route path="/signup">
-          <SignupForm />
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
+    </div>
     </BrowserRouter>
   );
 }
