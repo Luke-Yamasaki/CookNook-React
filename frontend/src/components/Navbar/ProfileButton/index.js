@@ -1,27 +1,21 @@
-import React, { useState, useEffect } from "react";
+//Hooks
+import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
+
+//styles
+import styles from './ProfileButton.module.css';
+
+//actions
 import { logout } from '../../../store/session';
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
 
-  const openMenu = () => {
-    if (showMenu) return;
-    setShowMenu(true);
+  const handleDropDown = (e) => {
+    e.preventDefault();
+    return setShowMenu(!showMenu)
   };
-
-  useEffect(() => {
-    if (!showMenu) return;
-
-    const closeMenu = () => {
-      setShowMenu(false);
-    };
-
-    document.addEventListener('click', closeMenu);
-
-    return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -29,20 +23,21 @@ function ProfileButton({ user }) {
   };
 
   return (
-    <>
-      <button onClick={openMenu}>
-        Open Menu
-      </button>
+    <div className={styles.userBox}>
+      <div className={styles.info} onClick={handleDropDown}>
+        <img className={styles.image} src="https://cooknook.s3.amazonaws.com/user-profile.png" alt='User profile.' />
+        <div>{`Hello ${user.username}`}</div>
+      </div>
       {showMenu && (
-        <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
-          <li>
-            <button onClick={handleLogout}>Log Out</button>
+        <ul className={styles.list}>
+          <li className={styles.item}>{user.username}</li>
+          <li className={styles.item}>{user.email}</li>
+          <li className={styles.item}>
+            <div className={styles.logout} onClick={handleLogout}>Log Out</div>
           </li>
         </ul>
       )}
-    </>
+    </div>
   );
 }
 
