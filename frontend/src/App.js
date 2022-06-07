@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //components
-import LoginForm from "./components/Authentication/LoginForm";
-import SignupForm from "./components/Authentication/SignupForm";
+import LoginForm from "./components/Forms/Login";
+import SignupForm from "./components/Forms/Signup";
 import Modal from "./components/Modal";
 
 //actions
