@@ -24,11 +24,11 @@
 
 .navItem {
   list-style: none;
-  height: 50px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  padding: 5px;
   margin: 0px;
 }
 
@@ -42,13 +42,16 @@
   background-image: url("../../Assets/Logo/white.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 50px;
+  height: 35px;
 }
 
 .navLink {
   font-family: din-2014, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 18px;
   font-style: normal;
+  letter-spacing: 0.3px;
+  color: white;
   text-decoration: none;
 }
 
@@ -56,12 +59,21 @@
   text-decoration: underline;
 }
 
+.navLink:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .question {
   font-family: din-2014, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: 1px;
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+  border: 1px solid #DDDDDD;
   color: white;
   display: flex;
   justify-content: center;

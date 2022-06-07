@@ -6,6 +6,9 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import { Searchbar } from './Searchbar';
 
+//Logo
+import logo from '../../Assets/Logo/white.png';
+
 //styles
 import styles from './Navbar.module.css';
 
@@ -17,7 +20,7 @@ function Navbar(){
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <NavLink to='/' className={styles.logoLink}>
-            <div className={styles.logo} />
+            <img src={logo} alt="CookNook's Logo." className={styles.logo} />
           </NavLink>
         </li>
         <li className={styles.navItem}>
@@ -36,9 +39,6 @@ function Navbar(){
           <div className={styles.question}>
             Add a question
           </div>
-        </li>
-        <li className={styles.navItem}>
-          <div className={styles.logout}>Log out</div>
         </li>
       </ul>
     </nav>
