@@ -13,7 +13,7 @@ export const Home = () => {
     return (
         <div className={styles.wrapper}>
             <Sidebar />
-            <section className={styles.section}>
+            <section className={styles.feed}>
                 {/*Object.values(questions).map(question =>
                     <Post key={question.id} question={question}>
                 )*/}

@@ -1,0 +1,48 @@
+.wrapper {
+    width: 100vw;
+    max-width: 1600px;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    max-width: 1600px;
+    height: calc(100vh - 100px);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0px 25px 0px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: din-2014, sans-serif;
+    font-size: clamp(11.5px, 1.295vw, 10vw);
+    font-weight: 800;
+    font-style: normal;
+    line-break: auto;
+    color: black;
+    width: 27.5vw;
+    min-width: 250px;
+    height: 100px;
+}
+
+
+.image {
+    width: 27.5vw;
+    min-width: 250px;
+    height: 27.5vw;
+    min-height: 250px;
+    object-fit: cover;
+    object-position: center;
+}

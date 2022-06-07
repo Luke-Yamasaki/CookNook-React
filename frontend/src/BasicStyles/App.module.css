@@ -6,4 +6,6 @@
     width: 100vw;
     max-width: 1600px;
     min-height: 100vh;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.9);
 }

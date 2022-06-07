@@ -9,22 +9,22 @@ import { Searchbar } from './Searchbar';
 //styles
 import styles from './Navbar.module.css';
 
-function Navbar({ isLoaded }){
+function Navbar(){
   const sessionUser = useSelector(state => state.session.user);
 
-  return isLoaded && (
+  return (
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <NavLink href='/' className={styles.logoLink}>
+          <NavLink to='/' className={styles.logoLink}>
             <div className={styles.logo} />
           </NavLink>
         </li>
         <li className={styles.navItem}>
-          <NavLink href='/questions' className={styles.navLink}>Questions</NavLink>
+          <NavLink to='/questions' className={styles.navLink}>Questions</NavLink>
         </li>
         <li className={styles.navItem}>
-          <NavLink href='/topics' className={styles.navLink}>Topics</NavLink>
+          <NavLink to='/topics' className={styles.navLink}>Topics</NavLink>
         </li>
         <li className={styles.navItem}>
           <Searchbar />

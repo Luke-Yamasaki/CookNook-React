@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 //components
 import Modal from "./components/Modal";
 import Navbar from './components/Navbar';
+import { Home } from './components/Pages/Home';
 import { NotFound } from './components/Pages/NotFound';
 
 //actions
@@ -25,21 +26,21 @@ function App() {
 
   return isLoaded && (
     <BrowserRouter>
-    <div className={styles.background}>
-      {sessionUser && <Navbar />}
-      <Modal />
-      <Switch>
-        <Route path="/welcome">
-          <div>Hello</div>
-        </Route>
-        <Route path="/">
-          <div>Hello</div>
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-    </div>
+      <div className={styles.background}>
+        <Navbar />
+        <Modal />
+        <Switch>
+          <Route path="/welcome">
+            <div>Hello</div>
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }
