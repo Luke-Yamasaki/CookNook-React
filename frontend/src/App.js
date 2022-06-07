@@ -32,6 +32,9 @@ function App() {
         <Route path="/welcome">
           <div>Hello</div>
         </Route>
+        <Route path="/">
+          <div>Hello</div>
+        </Route>
         <Route>
           <NotFound />
         </Route>
